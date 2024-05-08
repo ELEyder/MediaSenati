@@ -36,18 +36,18 @@
         </div>
 
         <div class="from-wrapper sign-up">
-            <form action="">
+            <form action="registrar" method="POST">
                 <h2>Sing Up</h2>
                 <div class="input-group">
-                    <input type="text" required>
+                    <input type="text" name="name" required>
                     <label for="">Username</label>
                 </div>
                 <div class="input-group">
-                    <input type="email" required>
-                    <label for="">Username</label>
+                    <input type="email" name="email" required>
+                    <label for="">Email</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label for="">Password</label>
                 </div>
                 <div class="remember">

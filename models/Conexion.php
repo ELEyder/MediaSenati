@@ -29,8 +29,13 @@ class Conexion {
 
     }
 
-    public function setUser($id, $name, $email, $password) {
-        $this->con->query('INSERT INTO `user` (`id`, `name`, `email`, `password`) VALUES ('.$id.', '.$name.', '.$email.', '.$password.');');
+    public function setUser($name, $email, $password) {
+        try {
+            $this->con->query('INSERT INTO `user` (`name`, `email`, `password`) VALUES ( "'.$name.'", "'.$email.'", "'.$password.'");');
+            return true;
+        } catch (mysqli_sql_exception $e) {
+            return false;
+        }
     }
 
     public function getPosts() {

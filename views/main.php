@@ -16,6 +16,7 @@
         ?>
         </div>
         <a class="postear" href="prepararpost">Crear Post</a>
+        <a class="postear" href="salir">Cerrar Sesión</a>
     </header>
     <main>
         POSTS:
