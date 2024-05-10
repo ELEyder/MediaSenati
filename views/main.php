@@ -22,10 +22,11 @@
         ?>
         </div>
         <a class="postear" href="prepararpost">Crear Post</a>
+        <a class="postear" href="configurar">Configuración</a>
         <a class="postear" href="salir">Cerrar Sesión</a>
     </header>
     <main>
-        <section class="post">
+        <section class="posts">
         POSTS:
         <?php
             foreach ($posts as $post) {
@@ -45,14 +46,13 @@
             Usuarios:
         <?php
             foreach ($usuarios as $usuario) {
-                echo '<div class="post">
-                <div class="post-header">
-                    <p class="post">' .$post['title']. '</p>
-                    <p class="post">' .$post['fecha']. '</p>
-                </div>
-                <div class="post-main">
-                    <p class="post">' .$post['description']. '</p>
-                </div>
+                if ($usuario['id'] == $id) {
+                    continue;
+                }
+                echo '<div class="usuario">
+                    <img src="'. $usuario['urlAvatar'] .'" alt="avatar" class="avatar">
+                    <p class="usuario">' .$usuario['name']. '</p>
+                    <a href="#" class="btnAgregarAmigo" id="agregarAmigo">Agregar</a>
                 </div>';
             }
         ?>

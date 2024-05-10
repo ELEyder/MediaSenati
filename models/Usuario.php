@@ -9,6 +9,11 @@ class Usuario extends Conexion {
         $retorno = [];
         $i = 0;
         while ($row = $query->fetch_assoc()) {
+            $urlAvatar = 'app/static/img/avatars/' .$row['id']. '.jpg';
+            if (!is_file($urlAvatar)) {
+                $urlAvatar = 'app/static/img/avatars/0.jpg';
+            }
+            $row['urlAvatar'] = $urlAvatar;
             $retorno[$i] = $row;
             $i++;
         }
