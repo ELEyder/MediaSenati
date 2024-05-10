@@ -1,5 +1,4 @@
 <?php
-require('app/bd/Conexion.php');
 class Post extends Conexion {
     public function __construct() {
         parent::__construct();

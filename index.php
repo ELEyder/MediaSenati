@@ -1,4 +1,8 @@
 <?php
+require('app/bd/Conexion.php');
+require("models/Post.php");
+require("models/Usuario.php");
+
 session_start();
 $url = $_GET['url'];
 $url = rtrim($url, '/');

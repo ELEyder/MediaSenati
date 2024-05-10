@@ -1,6 +1,4 @@
 <?php
-require('app/bd/Conexion.php');
-
 class Usuario extends Conexion {
 
     public function __construct() {

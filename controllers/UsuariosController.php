@@ -1,8 +1,6 @@
 <?php
+$con = new Usuario();
 
-require("models/Conexion.php");
-$con = new Conexion();
-
-$datos = $con->getUsers();
+$datos = $con->getUsuarios();
 
 require("views/usuarios.php");

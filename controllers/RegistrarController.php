@@ -1,12 +1,11 @@
 <?php
-require("models/Conexion.php");
-$con = new Conexion();
+$con = new Usuario();
 
-$rpta = $con->setUser( $_POST["name"], $_POST["email"], $_POST["password"]);
+$rpta = $con->setUsuario( $_POST["name"], $_POST["email"], $_POST["password"]);
 if (!$rpta) {
     header('Location: login');
 } else {
-    $datos = $con->getUser($_POST["name"], $_POST["password"]);
+    $datos = $con->getUsuario($_POST["name"], $_POST["password"]);
     
     if ($datos == []) {
         header('Location: login');

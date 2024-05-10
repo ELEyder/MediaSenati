@@ -24,9 +24,19 @@ img.logo {
 }
 div.info-user {
     margin-left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img.avatar {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 p.user {
     color: white;
+    margin: 2px;
+    padding: 0;
 }
 main {
     display: flex;

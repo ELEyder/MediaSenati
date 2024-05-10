@@ -1,6 +1,4 @@
 <?php
-
-require("models/Usuario.php");
 $con = new Usuario();
 $datos = $con->getUsuario($_POST["name"], $_POST["password"]);
 
