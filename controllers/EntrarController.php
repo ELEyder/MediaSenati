@@ -1,9 +1,8 @@
 <?php
 
-require("models/Conexion.php");
-$con = new Conexion();
-
-$datos = $con->getUser($_POST["name"], $_POST["password"]);
+require("models/Usuario.php");
+$con = new Usuario();
+$datos = $con->getUsuario($_POST["name"], $_POST["password"]);
 
 if ($datos == []) {
     header('Location: login');

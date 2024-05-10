@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^app/static/ - [L] # Ignorar las rutas que comienzan con /app/
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

@@ -1,7 +1,6 @@
 <?php
-session_start();
-require("models/Conexion.php");
-$con = new Conexion();
+require("models/Post.php");
+$con = new Post();
 $posts = $con->getPosts();
 $email = $_SESSION['email'];
 $name = $_SESSION['name'];
