@@ -39,4 +39,13 @@ class Usuario extends Conexion {
             return false;
         }
     }
+
+    public function upUsuario($id, $name, $email, $password) {
+        try {
+            $this->con->query('UPDATE `user` SET name = "'.$name.'", email = "'.$email.'", password = "'.$password.'" WHERE id LIKE "'. $id. '";');
+            return true;
+        } catch (mysqli_sql_exception $e) {
+            return false;
+        }
+    }
 }
