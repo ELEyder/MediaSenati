@@ -8,9 +8,9 @@
 </head>
 <body>
     <?php
-    echo '<form class="configurar" action="actualizar" method="POST">
+    echo '<form class="configurar" action="actualizar" method="POST" enctype="multipart/form-data">
         <label for="">Avatar: </label>
-        <input type="file" name="myImage" accept="image/jpeg" />
+        <input type="file" name="avatar" accept="image/jpeg" />
         <label for="">Nombre: </label>
         <input type="text" name="name" value="'.$name.'" required>
         <label for="">Correo: </label>
