@@ -18,8 +18,6 @@ if (isset($_FILES['avatar'])){
         $ruta_guardado = $carpeta_destino . $nuevo_nombre;
         move_uploaded_file($avatar['tmp_name'], $ruta_guardado);
     }
-} else {
-    
 }
 
 if ($rpta) {
