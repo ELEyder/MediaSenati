@@ -1,9 +1,9 @@
 <?php
 $con = new Usuario();
-$datos = $con->getUsuario($_POST["name"], $_POST["password"]);
+$datos = $con->getUsuario($_POST["username"], $_POST["password"]);
 
 if ($datos == []) {
-    header('Location: login');
+    // header('Location: login');
 } else {
     session_start();
     foreach ($datos as $user) {
