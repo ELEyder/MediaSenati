@@ -49,7 +49,7 @@ INSERT INTO `post` (`id`, `title`, `description`, `fecha`) VALUES
 
 CREATE TABLE `user` (
   `id` int(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `Rol` int(11) NOT NULL DEFAULT 0,
@@ -60,7 +60,7 @@ CREATE TABLE `user` (
 -- Volcado de datos para la tabla `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `Rol`, `Estado`) VALUES
+INSERT INTO `user` (`id`, `username`, `email`, `password`, `Rol`, `Estado`) VALUES
 (1, 'Eyder', 'eyder@gmail.com', '12345', 0, 1),
 (2, 'eyder2', 'eyder2@g', '1234', 0, 1),
 (3, 'Eva', 'eva@123', '12345', 0, 1),

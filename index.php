@@ -7,13 +7,17 @@ session_start();
 $url = $_GET['url'];
 $url = rtrim($url, '/');
 $url = explode('/',$url);
-if (isset($url[0]) && $url[0] != "") {
-    if (!isset($_SESSION['email']) && $url[0] != "entrar"){
-        require("controllers/LoginController.php");
-    } else {
+
+if (isset($_SESSION['username'])){
+    if (isset($url[0]) && $url[0] != "" && $url[0] != "login" && $url[0] != "entrar" && $url[0] != "registrar" && $url[0] != "postear") {
         require("controllers/".$url[0]."Controller.php");
+    } else {
+        require("controllers/MainController.php");
     }
-}
-else {
-    require("controllers/LoginController.php");
+} else {
+    if (isset($url[0]) && $url[0] == "registrar" || $url[0] == "entrar"){
+        require("controllers/".$url[0]."Controller.php");
+    } else {
+        require("controllers/LoginController.php");
+    }
 }

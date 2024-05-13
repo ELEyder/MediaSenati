@@ -15,7 +15,7 @@
             echo '
             <img src="'. $urlAvatar .'" alt="avatar" class="avatar">
             <div>
-                <p class="user name">Bienvenido ' . $name . '</p>
+                <p class="user name">Bienvenido ' . $username . '</p>
                 <p class="user email">' . $email . '</p>
             </div>
             ';
@@ -51,7 +51,7 @@
                 }
                 echo '<div class="usuario">
                     <img src="'. $usuario['urlAvatar'] .'" alt="avatar" class="avatar">
-                    <p class="usuario">' .$usuario['name']. '</p>
+                    <p class="usuario">' .$usuario['username']. '</p>
                     <a href="#" class="btnAgregarAmigo" id="agregarAmigo">Agregar</a>
                 </div>';
             }

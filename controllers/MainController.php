@@ -6,7 +6,7 @@ $usuarios = $con->getUsuarios();
 
 $id = $_SESSION['id'];
 $email = $_SESSION['email'];
-$name = $_SESSION['name'];
+$username = $_SESSION['username'];
 
 $urlAvatar = 'app/static/img/avatars/' .$id. '.jpg';
 

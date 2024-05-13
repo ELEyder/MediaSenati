@@ -11,7 +11,7 @@
     </header>
     <?php
         foreach ($datos as $user) {
-            echo '<p>' . $user['name'] . '</p>';
+            echo '<p>' . $user['username'] . '</p>';
         }
     ?>
 </body>

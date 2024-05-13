@@ -12,7 +12,7 @@
         <label for="">Avatar: </label>
         <input type="file" name="avatar" accept="image/jpeg" />
         <label for="">Nombre: </label>
-        <input type="text" name="name" value="'.$name.'" required>
+        <input type="text" name="name" value="'.$username.'" required>
         <label for="">Correo: </label>
         <input type="email" name="email" value="'.$email.'" required>
         <label for="">Contraseña: </label>

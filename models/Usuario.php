@@ -20,8 +20,8 @@ class Usuario extends Conexion {
         return $retorno;
     }
 
-    public function getUsuario($name, $password) {
-        $query = $this->con->query('SELECT * FROM user WHERE name LIKE "' . $name .'" AND password LIKE "'. $password . '"');
+    public function getUsuario($username, $password) {
+        $query = $this->con->query('SELECT * FROM user WHERE username LIKE "' . $username .'" AND password LIKE "'. $password . '"');
         $retorno = [];
         $i = 0;
         while ($row = $query->fetch_assoc()) {
@@ -31,18 +31,18 @@ class Usuario extends Conexion {
         return $retorno;
     }
 
-    public function setUsuario($name, $email, $password) {
+    public function setUsuario($username, $email, $password) {
         try {
-            $this->con->query('INSERT INTO `user` (`name`, `email`, `password`) VALUES ( "'.$name.'", "'.$email.'", "'.$password.'");');
+            $this->con->query('INSERT INTO `user` (`username`, `email`, `password`) VALUES ( "'.$username.'", "'.$email.'", "'.$password.'");');
             return true;
         } catch (mysqli_sql_exception $e) {
             return false;
         }
     }
 
-    public function upUsuario($id, $name, $email, $password) {
+    public function upUsuario($id, $username, $email, $password) {
         try {
-            $this->con->query('UPDATE `user` SET name = "'.$name.'", email = "'.$email.'", password = "'.$password.'" WHERE id LIKE "'. $id. '";');
+            $this->con->query('UPDATE `user` SET username = "'.$username.'", email = "'.$email.'", password = "'.$password.'" WHERE id LIKE "'. $id. '";');
             return true;
         } catch (mysqli_sql_exception $e) {
             return false;

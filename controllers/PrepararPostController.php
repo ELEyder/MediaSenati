@@ -1,3 +1,3 @@
 <?php
-$name = $_SESSION['name'];
+$name = $_SESSION['username'];
 require("views/prepararpost.php");

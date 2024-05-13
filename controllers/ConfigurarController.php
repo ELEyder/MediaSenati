@@ -2,7 +2,7 @@
 $con = new Usuario();
 
 $id = $_SESSION['id'];
-$name = $_SESSION['name'];
+$username = $_SESSION['username'];
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
