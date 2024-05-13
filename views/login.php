@@ -15,7 +15,7 @@
             <form action="entrar" method="POST">
                 <h2>Red Social</h2>
                 <div class="input-group">
-                    <input type="text" name="name" required>
+                    <input type="text" name="username" required>
                     <label for="">Username</label>
                 </div>
                 <div class="input-group">
@@ -30,28 +30,36 @@
                     <p>Don't have an account? <a href="#" class="signUp-link">Sign Up</a></p>
                 </div>
             </form>
-            <div class="google">
+            <!-- <div class="google">
                 <button class="btn-google" id="btn-google">G</button>
-            </div>
+            </div> -->
         </div>
 
         <div class="from-wrapper sign-up">
             <form action="registrar" method="POST">
                 <h2>Sing Up</h2>
                 <div class="input-group">
-                    <input type="text" name="name" required>
-                    <label for="">Username</label>
+                    <input type="text" name="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="firstname" required>
+                    <label for="firstname">First Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="lastname" required>
+                    <label for="lastname">Last Name</label>
                 </div>
                 <div class="input-group">
                     <input type="email" name="email" required>
-                    <label for="">Email</label>
+                    <label for="email">Email</label>
                 </div>
                 <div class="input-group">
                     <input type="password" name="password" required>
-                    <label for="">Password</label>
+                    <label for="password">Password</label>
                 </div>
                 <div class="remember">
-                    <label><input type="checkbox"> I agree to the terms & conditions</label>
+                    <label><input type="checkbox" required> I agree to the terms & conditions</label>
                 </div>
                 <button type="submit" class="btn">Sign Up</button>
                 <div class="sign-link">
@@ -72,7 +80,6 @@
         <span style="--i:2"></span>
         <span style="--i:1"></span>
     </div>
-    <script type="module" src="app/main.js"></script>
     <script>
         const wrapper = document.querySelector('.wrapper');
         const signUpLink = document.querySelector('.signUp-link');
@@ -83,12 +90,13 @@
         signUpLink.addEventListener('click', () => {
             wrapper.classList.toggle('show-sign');
             wrapper.classList.add('show-bg');
+            wrapper.style.height = '620px'; 
         })
 
         signInLink.addEventListener('click', () => {
             wrapper.classList.toggle('show-sign');
             wrapper.classList.add('show-bg');
-
+            wrapper.style.height = '500px';
         })
 
         toggleLogin.addEventListener('click', () => {
